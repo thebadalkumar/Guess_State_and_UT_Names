@@ -42,7 +42,7 @@ d3.json('states.geojson', function(json) {
 
     .on('click', function(d, i) {
             let ourstate = d.properties.state;
-            var getState = prompt("Enter State")
+            var getState = prompt(`Enter ${d.properties.type == 'ut' ? "UT Name" : "State Name"}`);
             if (getState.toLowerCase().trim() == ourstate.toLowerCase()) {
                 ourstate == "Madhya Pradesh" ? this.style.fill = "url(#chakra)" : this.style.fill = d.properties.fill
                 india.append("text")
