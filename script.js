@@ -27,9 +27,9 @@ defs.append("svg:pattern")
     .append("svg:image")
     .attr("xlink:href", 'chakra.png')
     .attr("width", 125)
-    .attr("height", 85)
-    .attr("x", 12)
-    .attr("y", 8);
+    .attr("height", 50)
+    .attr("x", 25)
+    .attr("y", 52);
 
 d3.json('states.geojson', function(json) {
 
@@ -38,6 +38,7 @@ d3.json('states.geojson', function(json) {
         .enter().append("path")
         .attr("d", path)
         .style("fill", "#ffbf00")
+        // .style("fill", (d)=>d.properties.fill)
 
     .on('click', function(d, i) {
             let ourstate = d.properties.state;
@@ -46,13 +47,13 @@ d3.json('states.geojson', function(json) {
                 ourstate == "Madhya Pradesh" ? this.style.fill = "url(#chakra)" : this.style.fill = d.properties.fill
                 india.append("text")
                     .attr("transform", "translate(" + path.centroid(d) + ")")
-                    .attr("dx", ourstate == "Madhya Pradesh" ? "-3.5em" : "-1em")
-                    .attr("dy", ourstate == "Madhya Pradesh" ? "3.1em" : "0.35em")
+                    .attr("dx", ourstate == "Madhya Pradesh" ? "-1.5em" : "-1em")
+                    .attr("dy", ourstate == "Madhya Pradesh" ? "-1.6em" : "0.35em")
                     .style("font-size", ".7rem")
                     .style("cursor", "default")
                     .text(ourstate)
                     .on("mouseover", function() {
-                        tooltip.html(`${d.properties.type == 'ut'? 'Union Territory': 'State'}: ${ourstate}<br>Capital: ${d.properties.capital}`);
+                        tooltip.html(`${d.properties.type == 'ut'? 'Union Territory': 'State'}: ${ourstate}<br>Capital: ${d.properties.capital}<br>GST Code: ${d.properties.state_code}`);
 
                         return tooltip.attr("class") == "showMe" ? tooltip.style("visibility", "visible") : tooltip.style("visibility", "hidden");
                     })
