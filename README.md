@@ -1,7 +1,7 @@
 # Learn While Play
 ## Guess the Indian State and UT Name
 
-[Visit Here](https://thebadalkumar.github.io/project/india_state_ut_name_guess/)
+[Visit Here](https://thebadalkumar.github.io/project/indian-map/)
 
 - Guess all Indian State and UT Names you see some magic
 - Get Details on State hover
