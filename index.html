@@ -1,31 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>My India</title>
-    <link rel="shortcut icon" href="flag.png">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="style.css" rel="stylesheet">
-</head>
-
-<body>
-
-    <div class="container">
-        <div id="chart"></div>
-    </div>
-
-    <footer>Made with ❤️ By <a href="https://linkedin.com/in/thebadalkumar/" target="_blank">Badal Kumar</a></footer>
-
-    <script src="d3.js"></script>
-    <script src="topojson.js"></script>
-
-    <script src="d3.min.js"></script>
-    <script src="script.js"></script>
-
-    <script src="html2canvas.js"></script>
-    <script>
-        document.getElementById("dldBtn").addEventListener("click", function() {
+<!doctypehtml><title>My India</title><link href=flag.png rel="shortcut icon"><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=style.css rel=stylesheet><div class=container><div id=chart></div></div><footer>Made with ❤️ By <a href=https://linkedin.com/in/thebadalkumar/ target=_blank>Badal Kumar</a></footer><script src=d3.js></script><script src=topojson.js></script><script src=d3.min.js></script><script src=script.js></script><script src=html2canvas.js></script><script>document.getElementById("dldBtn").addEventListener("click", function() {
             d3.select("#infotxt").text("Created By Badal Kumar");
             d3.select("#showData").text("");
             d3.select("#disctxt").text("");
@@ -41,8 +14,4 @@
             d3.select("#showData").text("Show Details");
             d3.select("#disctxt").text("*If you guess correct name it show State/ UT name else Red Background");
             d3.select("#dldBtn").html("<a>Export Image</a>");
-        });
-    </script>
-</body>
-
-</html>
+        });</script>
